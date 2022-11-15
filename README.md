@@ -15,16 +15,16 @@ and the `royale_DIR` to the share folder of your Royale binary installation (e.g
 
 ## Quick Start
 Below you see which key toggles which filter:
-- n: [show normals](#ShowNormals) 
-- m: [remove outliers](#OutlierRemoval)
-- b: [bilateral filter](#BilateralFilter)
-- v: [median filter](#MedianFilter)
-- a: [remove shadow points](#ShadowpointRemoval)
-- d: [voxelgrid](#Voxelgrid)
-- y: [conditional removal](#ConditionalRemoval)
-- j: [take screenshot](#TakeScreenshot) (implemented by PCL)
-- k: [region growing](#RegionGrowing)
-- p: [plane detection](#PlaneDetection) 
+- n: [show normals](#show-normals) 
+- m: [remove outliers](#outlier-removal)
+- b: [bilateral filter](#bilateral-filter)
+- v: [median filter](#median-filter)
+- a: [remove shadow points](#shadowpoint-removal)
+- d: [voxelgrid](#voxelgrid)
+- y: [conditional removal](#conditional-removal)
+- j: [take screenshot](#take-screenshot) (implemented by PCL)
+- k: [region growing](#region-growing)
+- p: [plane detection](#plane-detection) 
 
 ## Code explanation
 The PCL example shows how to apply different filters or segmentation techniques on a point cloud and how to switch between different clouds
