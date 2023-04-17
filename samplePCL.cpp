@@ -199,19 +199,19 @@ public:
 
             for (size_t i = 0u; i < cloud->points.size(); ++i)
             {
-                cloud->points[i].x = data->points[i].x;
-                cloud->points[i].y = data->points[i].y;
-                cloud->points[i].z = data->points[i].z;
+                cloud->points[i].x = data->getX(i);
+                cloud->points[i].y = data->getY(i);
+                cloud->points[i].z = data->getZ(i);
 
-                cloudDuplicate->points[i].x = data->points[i].x;
-                cloudDuplicate->points[i].y = data->points[i].y;
-                cloudDuplicate->points[i].z = data->points[i].z;
+                cloudDuplicate->points[i].x = data->getX(i);
+                cloudDuplicate->points[i].y = data->getY(i);
+                cloudDuplicate->points[i].z = data->getZ(i);
 
-                cloudIntensity->points[i].x = data->points[i].x;
-                cloudIntensity->points[i].y = data->points[i].y;
-                cloudIntensity->points[i].z = data->points[i].z;
+                cloudIntensity->points[i].x = data->getX(i);
+                cloudIntensity->points[i].y = data->getY(i);
+                cloudIntensity->points[i].z = data->getZ(i);
 
-                const RgbColor col = getColor(data->points[i].z);
+                const RgbColor col = getColor(data->getZ(i));
 
                 cloud->points[i].r = col.r;
                 cloud->points[i].g = col.g;
@@ -222,9 +222,9 @@ public:
                 cloudDuplicate->points[i].b = col.b;
 
                 // calculate intensity from color
-                cloudIntensity->points[i].intensity = data->points[i].grayValue / 2000.0f;
+                cloudIntensity->points[i].intensity = data->getGrayValue(i) / 2000.0f;
 
-                if (data->points[i].depthConfidence > 0)
+                if (data->getDepthConfidence(i) > 0)
                 {
                     cloud->points[i].a = 255;
                     cloudDuplicate->points[i].a = 255;
@@ -670,7 +670,7 @@ int main(int argc, char *argv[])
                 }
             }
 
-            if (!growRegion & !bilateral & !detectPlanes)
+            if (!growRegion && !bilateral && !detectPlanes)
             {
                 viewer.removeAllPointClouds();
 
