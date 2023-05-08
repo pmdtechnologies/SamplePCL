@@ -11,7 +11,7 @@ If you're running Debian or Ubuntu, please install the `libvtk6-qt-dev` and `lib
 otherwise you might get errors during compilation.
 
 After installing everything, you can start CMake. There you have to set the `PCL_DIR` to your PCL installation (e.g. C:/Program Files/PCL 1.9.1/cmake)
-and the `royale_DIR` to the share folder of your Royale binary installation (e.g. D:/Program Files/royale/4.23.0.1062/share) and click **Generate**.
+and the `royale_DIR` to the share folder of your Royale binary installation (e.g. D:/Program Files/royale/5.2.0.1936/share) and click **Generate**.
 
 ## Quick Start
 Below you see which key toggles which filter:
