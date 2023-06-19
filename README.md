@@ -13,6 +13,10 @@ otherwise you might get errors during compilation.
 After installing everything, you can start CMake. There you have to set the `PCL_DIR` to your PCL installation (e.g. C:/Program Files/PCL 1.9.1/cmake)
 and the `royale_DIR` to the share folder of your Royale binary installation (e.g. D:/Program Files/royale/4.23.0.1062/share) and click **Generate**.
 
+**Attention**: With Royale 5.3 we switched to C++17, but there is no PCL version available that
+supports this. So, if you want to use PCL with Royale, you have to use a version <5.3! 
+If you only need a pointcloud functionality, check out our Open3D example. 
+
 ## Quick Start
 Below you see which key toggles which filter:
 - n: [show normals](#show-normals) 
